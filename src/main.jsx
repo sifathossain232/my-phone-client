@@ -18,12 +18,12 @@ const router = createBrowserRouter([
       {
         path: "/phones",
         element: <Phones />,
-        loader: () => fetch('http://localhost:7000/phones')
+        loader: () => fetch('https://my-phone-server-np6h.vercel.app/phones')
       },
       {
         path: '/phone/:id',
         element: <Phone></Phone>,
-        loader: ({params}) => fetch(`http://localhost:7000/phones/${params.id}`)
+        loader: ({params}) => fetch(`https://my-phone-server-np6h.vercel.app/phones/${params.id}`)
       }
     ],
   },
